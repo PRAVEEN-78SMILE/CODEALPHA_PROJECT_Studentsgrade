@@ -39,3 +39,5 @@ Methods:
 Input Method: Prompts the teacher to input student names and grades. Calculation Methods: Computes the highest, lowest, and average grades. Output Method: Displays the grades of all students and the computed results.
 
 The program is designed to be simple and easily extensible. It uses standard Java constructs such as arrays and loops to handle the input and output efficiently. This ensures that the program is easy to understand and maintain, even for beginners learning Java.
+OUTPUT
+<img width="611" height="277" alt="Output" src="https://github.com/user-attachments/assets/73f06a7a-170f-47ec-b253-185fef549270" />

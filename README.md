@@ -1,67 +1,41 @@
-import java.util.ArrayList;
-import java.util.Scanner;
+CodeAlpha_Student-Grade-Tracker
+COMPANY: CODEALPHA
 
-public class StudentGradeManagerConsole {
- public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-  ArrayList<String> studentNames = new ArrayList<>();
-  ArrayList<Integer> studentGrades = new ArrayList<>();
+NAME:PRAVEENKUMAR A
 
+DOMAIN: JAVA PROGRAMMING INTERNSHIP
 
-   System.out.print("Enter the number of students: ");
-        int numStudents = scanner.nextInt();
-        scanner.nextLine(); // consume newline
+`` The Student Grade Tracker is a simple Java application designed to help teachers track and manage student grades. It allows teachers to enter student grades and calculate key statistical values such as the average score, highest score, and lowest score of all students. This program is designed to store student data in an array, and it uses basic operations to compute statistics from that data.
 
-  // Input student data
-        for (int i = 0; i < numStudents; i++) {
-            System.out.print("\nEnter name for student " + (i + 1) + ": ");
-            String name = scanner.nextLine();
-            studentNames.add(name);
+This application is implemented in Java and is suitable for classroom settings where a teacher needs to maintain grade data for multiple students. The goal of the program is to provide a straightforward way to manage students' grades and compute essential information related to their academic performance.
 
-   int grade;
-            while (true) {
-                System.out.print("Enter grade for " + name + " (0-100): ");
-                grade = scanner.nextInt();
-                if (grade >= 0 && grade <= 100) {
-                    studentGrades.add(grade);
-                    scanner.nextLine(); // consume newline
-                    break;
-                } else {
-                    System.out.println("Invalid grade. Please enter a value between 0 and 100.");
-                }
-            }
-        }
+Features
+Grade Input: Teachers can enter grades for students. The program prompts the teacher to input a student’s name and their grade, which is stored in an array.
 
-   // Display report
-        System.out.println("\n===== Student Grades Summary =====");
-        int total = 0;
-        int highest = studentGrades.get(0);
-        int lowest = studentGrades.get(0);
-        String topStudent = studentNames.get(0);
-        String lowStudent = studentNames.get(0);
+Average Calculation: After entering all the grades, the program computes the average grade for all students.
 
-   for (int i = 0; i < studentNames.size(); i++) {
-            String name = studentNames.get(i);
-            int grade = studentGrades.get(i);
-            System.out.println(name + " - " + grade);
+Highest and Lowest Grade: The program determines the highest and lowest grades entered by the teacher.
 
-   total += grade;
+Student Data: The program stores student names and their corresponding grades, providing a clear list of all students with their grades.
 
-  if (grade > highest) {
-                highest = grade;
-                topStudent = name;
-            }
+User-Friendly Interface: The program uses a text-based interface, making it easy for teachers to input grades and see the results.
 
-  if (grade < lowest) {
-                lowest = grade;
-                lowStudent = name;
-            }
-        }
+Application Workflow
+Input Phase: When the program starts, the teacher is prompted to enter student names and their corresponding grades. The teacher can input multiple students, and the grades will be stored in the system.
 
-   double average = (double) total / studentGrades.size();
+Processing Phase: After entering the grades, the program processes the data to calculate the following:
 
-   System.out.printf("\nAverage Grade: %.2f\n", average);
-        System.out.println("Highest Grade: " + highest + " (Student: " + topStudent + ")");
-        System.out.println("Lowest Grade: " + lowest + " (Student: " + lowStudent + ")");
-    }
-}
+Average Grade: This is calculated by summing all the grades and dividing by the total number of students. Highest Grade: The program finds the maximum grade entered in the list of student grades. Lowest Grade: Similarly, the program identifies the minimum grade entered. Output Phase: Finally, the program displays the list of students along with their grades, followed by the computed average grade, highest grade, and lowest grade.
+
+The program then terminates, allowing the teacher to either start a new session or exit.
+
+Code Structure
+The StudentGradeTracker.java file contains the main logic of the application. The file consists of the following key components:
+
+Variables: It defines arrays to store student names and their respective grades.
+
+Methods:
+
+Input Method: Prompts the teacher to input student names and grades. Calculation Methods: Computes the highest, lowest, and average grades. Output Method: Displays the grades of all students and the computed results.
+
+The program is designed to be simple and easily extensible. It uses standard Java constructs such as arrays and loops to handle the input and output efficiently. This ensures that the program is easy to understand and maintain, even for beginners learning Java.

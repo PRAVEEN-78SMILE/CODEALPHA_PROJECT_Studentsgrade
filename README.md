@@ -31,13 +31,13 @@ Input Phase: When the program starts, the teacher is prompted to enter student n
 
 The program then terminates, allowing the teacher to either start a new session or exit.
 
-  Code Structure:
+  * Code Structure:
      The StudentGradeTracker.java file contains the main logic of the application. The file consists of the following key components:
 
- Variables: 
+  * Variables: 
          It defines arrays to store student names and their respective grades.
 
- Input Method:
+  * Input Method:
          Prompts the teacher to input student names and grades. Calculation Methods: Computes the highest, lowest, and average grades. Output Method: Displays the grades of all students and the computed results.
  
    The program is designed to be simple and easily extensible. It uses standard Java constructs such as arrays and loops to handle the input and output efficiently. This ensures that the program is easy to understand and maintain, even for beginners learning Java.
